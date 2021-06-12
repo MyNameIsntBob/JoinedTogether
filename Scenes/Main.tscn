@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Prefabs/Npc.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Prefabs/Bullet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Background.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D"]
@@ -14,6 +13,53 @@ position = Vector2( 1, 0 )
 
 [node name="Npc" parent="." instance=ExtResource( 1 )]
 position = Vector2( -144.06, 111.138 )
+gender = 1
 
-[node name="Bullet" parent="." instance=ExtResource( 3 )]
-position = Vector2( -39.1284, -229.476 )
+[node name="Npc2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -391.355, -66.3104 )
+
+[node name="Npc3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -142.172, -281.514 )
+gender = 1
+
+[node name="Npc4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 309, -324.932 )
+
+[node name="Npc5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 303.336, -5.9024 )
+gender = 1
+
+[node name="Npc6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 129.664, -213.555 )
+
+[node name="Npc7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 122.113, 224.403 )
+gender = 1
+
+[node name="Npc8" parent="." instance=ExtResource( 1 )]
+position = Vector2( -217.682, -81.4124 )
+
+[node name="Npc9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 88.1331, -362.687 )
+gender = 1
+
+[node name="Npc10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 433.591, -143.708 )
+
+[node name="Npc11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 539.305, 209.301 )
+gender = 1
+
+[node name="Npc12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 169.306, 362.209 )
+
+[node name="Npc13" parent="." instance=ExtResource( 1 )]
+position = Vector2( -147.835, 326.341 )
+gender = 1
+
+[node name="Npc14" parent="." instance=ExtResource( 1 )]
+position = Vector2( -404.569, 224.403 )
+
+[node name="Npc15" parent="." instance=ExtResource( 1 )]
+position = Vector2( -404.569, 224.403 )
+gender = 1

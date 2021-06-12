@@ -1,15 +1,36 @@
 extends 'res://Scripts/Character.gd'
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var wait_time = 3.0
+var wait_range = 1.0
+
+var captured := false
 
 
-# Called when the node enters the scene tree for the first time.
+enum genders {
+	Male,
+	Female
+}
+export (genders) var gender 
+
 func _ready():
-	pass # Replace with function body.
+	if gender == genders.Female:
+#		$Sprite.modulate = new Color(1, 0, 0)
+		$Sprite.modulate = Color(1, 0, 0)
+		pass
+	randomize()
+	_on_WanderTimer_timeout()
 
+func change_wander_direction():
+	input_vector = Vector2(rand_range(-1, 1), rand_range(-1, 1))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_WanderTimer_timeout():
+	$WanderTimer.wait_time = rand_range(wait_time - wait_range, wait_time + wait_range)
+	change_wander_direction()
+
+func _on_Area2D_body_entered(body):
+	if captured:
+		return
+	$WanderTimer.stop()
+	input_vector = Vector2.ZERO
+	captured = true
+	body.find_parent('Bullet').add_person(self)

@@ -1,21 +1,11 @@
 extends 'res://Scripts/Character.gd'
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 onready var BULLETS = preload("res://Prefabs/Bullet.tscn")
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	max_speed = 1000
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-#	print(rotation)
-	
 	input_vector = Vector2.ZERO
 	
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left") 
