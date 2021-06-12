@@ -1,0 +1,113 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prefabs/Rope.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/Ball.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Bullet.gd" type="Script" id=3]
+
+[node name="Bullet" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+shoot_speed = 1000.0
+
+[node name="Rope" type="Node2D" parent="."]
+position = Vector2( -64, 0 )
+
+[node name="Join1" type="PinJoint2D" parent="Rope"]
+position = Vector2( -128, 0 )
+node_a = NodePath("../../Ball1")
+node_b = NodePath("../Link")
+
+[node name="Link" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( -96, 0 )
+
+[node name="Join2" type="PinJoint2D" parent="Rope"]
+position = Vector2( -80, 0 )
+node_a = NodePath("../Link")
+node_b = NodePath("../Link2")
+
+[node name="Link2" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( -64, 0 )
+
+[node name="Join3" type="PinJoint2D" parent="Rope"]
+position = Vector2( -48, 0 )
+node_a = NodePath("../Link2")
+node_b = NodePath("../Link3")
+
+[node name="Link3" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( -32, 0 )
+
+[node name="Join4" type="PinJoint2D" parent="Rope"]
+position = Vector2( -16, 0 )
+node_a = NodePath("../Link3")
+node_b = NodePath("../Link4")
+
+[node name="Link4" parent="Rope" instance=ExtResource( 1 )]
+
+[node name="Join5" type="PinJoint2D" parent="Rope"]
+position = Vector2( 16, 0 )
+node_a = NodePath("../Link4")
+node_b = NodePath("../Link5")
+
+[node name="Link5" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 32, 0 )
+
+[node name="Join6" type="PinJoint2D" parent="Rope"]
+position = Vector2( 48, 0 )
+node_a = NodePath("../Link5")
+node_b = NodePath("../Link6")
+
+[node name="Link6" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+
+[node name="Join7" type="PinJoint2D" parent="Rope"]
+position = Vector2( 80, 0 )
+node_a = NodePath("../Link6")
+node_b = NodePath("../Link7")
+
+[node name="Link7" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 96, 0 )
+
+[node name="Join8" type="PinJoint2D" parent="Rope"]
+position = Vector2( 112, 0 )
+node_a = NodePath("../Link7")
+node_b = NodePath("../Link8")
+
+[node name="Link8" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 128, 0 )
+
+[node name="Join9" type="PinJoint2D" parent="Rope"]
+position = Vector2( 144, 0 )
+node_a = NodePath("../Link8")
+node_b = NodePath("../Link9")
+
+[node name="Link9" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 160, 0 )
+
+[node name="Join10" type="PinJoint2D" parent="Rope"]
+position = Vector2( 176, 0 )
+node_a = NodePath("../Link9")
+node_b = NodePath("../Link10")
+
+[node name="Link10" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 192, 0 )
+
+[node name="Join11" type="PinJoint2D" parent="Rope"]
+position = Vector2( 208, 0 )
+node_a = NodePath("../Link10")
+node_b = NodePath("../Link11")
+
+[node name="Link11" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 224, 0 )
+
+[node name="Join12" type="PinJoint2D" parent="Rope"]
+position = Vector2( 256, 0 )
+node_a = NodePath("../Link11")
+node_b = NodePath("../../Ball2")
+
+[node name="Ball1" parent="." instance=ExtResource( 2 )]
+position = Vector2( -192, 0 )
+
+[node name="Ball2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 192, 0 )
