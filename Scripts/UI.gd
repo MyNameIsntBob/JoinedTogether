@@ -24,7 +24,7 @@ func _process(delta):
 		score.text = str(Global.score)
 	
 	if highscore:
-		highscore.text = str(Global.highscore)
+		highscore.text = "HighScore: " + str(Global.highscore)
 		
 	if end_label and Global.is_game_over:
 		end_label.text = "You got " + str(Global.score) + " love.\n" + get_end_text()
@@ -34,3 +34,7 @@ func get_end_text():
 		if Global.score < k:
 			return end_text[k]
 	return "So much love that you broke something."
+
+
+func _on_Button_pressed():
+	Global.restart()

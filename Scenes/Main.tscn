@@ -9,10 +9,10 @@
 [node name="Background" parent="." instance=ExtResource( 4 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1, 0 )
+position = Vector2( 33.953, -697.035 )
 
 [node name="Npc" parent="." instance=ExtResource( 1 )]
-position = Vector2( -144.06, 111.138 )
+position = Vector2( -276.352, 107.358 )
 gender = 1
 
 [node name="Npc2" parent="." instance=ExtResource( 1 )]

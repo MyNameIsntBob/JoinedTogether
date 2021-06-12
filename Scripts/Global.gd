@@ -5,7 +5,14 @@ var is_game_over := false
 var highscore := 0
 
 func game_over():
+	if score > highscore:
+		highscore = score
 	is_game_over = true
+
+func restart():
+	score = 0
+	is_game_over = false
+	get_tree().reload_current_scene()
 
 func add_points(amount):
 	if amount == 0:

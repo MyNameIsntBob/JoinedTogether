@@ -30,7 +30,9 @@ func _on_WanderTimer_timeout():
 func _on_Area2D_body_entered(body):
 	if captured:
 		return
-	$WanderTimer.stop()
-	input_vector = Vector2.ZERO
-	captured = true
-	body.find_parent('Bullet').add_person(self)
+	var bul = body.find_parent('Bullet')
+	if bul:
+		$WanderTimer.stop()
+		input_vector = Vector2.ZERO
+		captured = true
+		bul.add_person(self)

@@ -11,14 +11,14 @@ func _process(delta):
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left") 
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	
-	look_at(get_global_mouse_position())
+	$Aim.look_at(get_global_mouse_position())
 
 	if Input.is_action_just_pressed("fire"):
 		fire()
 
 func fire():
 	var bul = BULLETS.instance()
-	bul.rotation = self.rotation + (PI * 0.5)
+	bul.rotation = $Aim.rotation + (PI * 0.5)
 	bul.shoot_dir = get_global_mouse_position() - self.global_position
-	bul.position = self.position
+	bul.position = $Aim/Position2D.global_position
 	get_parent().add_child(bul)

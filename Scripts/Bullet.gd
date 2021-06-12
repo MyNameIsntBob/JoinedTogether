@@ -41,6 +41,6 @@ func _on_KillTimer_timeout():
 	self.queue_free()
 
 func queue_free():
-	if len(get_tree().get_nodes_in_group("NPC")):
+	if len(get_tree().get_nodes_in_group("NPC")) == 0:
 		Global.game_over()
 	.queue_free()
