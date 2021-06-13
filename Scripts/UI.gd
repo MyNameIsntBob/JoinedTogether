@@ -7,10 +7,11 @@ export (NodePath) var time
 export (NodePath) var time2
 
 var end_text = {
+	-1: 'More Damage than good',
 	2: "Ouch, that's just sad",
-	5: "Some love in the air. Not Much though",
-	10: 'Love',
-	20: "Love is flying.",
+	10: "Some love in the air. Not Much though",
+	15: 'Love',
+	30: "Love is flying.",
 	999: 'Mega love bomb'
 }
 
