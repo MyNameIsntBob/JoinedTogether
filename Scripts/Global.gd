@@ -26,4 +26,12 @@ func add_points(amount):
 		score += 3
 		return
 	
-	amount += amount
+	score += amount
+
+const art = {
+	0: preload('res://Art/Characters_0000_Guy.png'),
+	1: preload('res://Art/Characters_0002_Girl.png')
+}
+
+func get_character(char_id):
+	return art[char_id]

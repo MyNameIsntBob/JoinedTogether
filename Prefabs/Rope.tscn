@@ -8,7 +8,6 @@ extents = Vector2( 16.0005, 1.67151 )
 [node name="Link" type="RigidBody2D"]
 collision_layer = 8
 collision_mask = 5
-mass = 0.2
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.5, 0.05 )

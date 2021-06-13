@@ -103,8 +103,56 @@ node_b = NodePath("../Link11")
 position = Vector2( 64, 0 )
 
 [node name="Join12" type="PinJoint2D" parent="Rope"]
-position = Vector2( 32, 0 )
+position = Vector2( 48, 0 )
 node_a = NodePath("../Link11")
+node_b = NodePath("../Link12")
+
+[node name="Link12" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+
+[node name="Join13" type="PinJoint2D" parent="Rope"]
+position = Vector2( 80, 0 )
+node_a = NodePath("../Link12")
+node_b = NodePath("../Link13")
+
+[node name="Link13" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+
+[node name="Join14" type="PinJoint2D" parent="Rope"]
+position = Vector2( 48, 0 )
+node_a = NodePath("../Link13")
+node_b = NodePath("../Link14")
+
+[node name="Link14" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+
+[node name="Join15" type="PinJoint2D" parent="Rope"]
+position = Vector2( 80, 0 )
+node_a = NodePath("../Link14")
+node_b = NodePath("../Link15")
+
+[node name="Link15" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+
+[node name="Join16" type="PinJoint2D" parent="Rope"]
+position = Vector2( 48, 0 )
+node_a = NodePath("../Link15")
+node_b = NodePath("../Link16")
+
+[node name="Link16" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+
+[node name="Join17" type="PinJoint2D" parent="Rope"]
+position = Vector2( 80, 0 )
+node_a = NodePath("../Link16")
+node_b = NodePath("../Link17")
+
+[node name="Link17" parent="Rope" instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+
+[node name="Join18" type="PinJoint2D" parent="Rope"]
+position = Vector2( 32, 0 )
+node_a = NodePath("../Link17")
 node_b = NodePath("../../Ball2")
 
 [node name="Ball1" parent="." instance=ExtResource( 2 )]
@@ -114,10 +162,11 @@ position = Vector2( 32, 0 )
 position = Vector2( -32, 0 )
 
 [node name="CaptureTimer" type="Timer" parent="."]
+wait_time = 5.0
 one_shot = true
 
 [node name="KillTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 6.0
 one_shot = true
 autostart = true
 

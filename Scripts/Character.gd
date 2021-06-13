@@ -15,4 +15,4 @@ func _process(delta):
 		velocity += input_vector * acceleration * delta
 		velocity = velocity.clamped(max_speed)
 	
-	velocity = move_and_slide(velocity)
+	velocity = move_and_slide(velocity, Vector2.ZERO, false, 4, 0.785398, false)
