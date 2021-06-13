@@ -10,6 +10,5 @@ enum types {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(type)
 	$Sprite.texture = Global.get_bubble(type)
 	

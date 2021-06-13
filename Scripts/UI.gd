@@ -4,6 +4,7 @@ export (NodePath) var score
 export (NodePath) var end_label
 export (NodePath) var highscore
 export (NodePath) var time
+export (NodePath) var time2
 
 var end_text = {
 	2: "Ouch, that's just sad",
@@ -15,6 +16,7 @@ var end_text = {
 
 func _ready():
 	time = get_node(time)
+	time2 = get_node(time2)
 	score = get_node(score)
 	highscore = get_node(highscore)
 	end_label = get_node(end_label)
@@ -24,6 +26,9 @@ func _process(_delta):
 	
 	if time:
 		time.text = str(int(Global.time_left))
+	
+	if time2:
+		time2.text = str(int(Global.time_left))
 	
 	if score:
 		score.text = str(Global.score)
