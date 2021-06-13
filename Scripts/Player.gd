@@ -17,21 +17,7 @@ func _process(_delta):
 		fire()
 		
 	if input_vector != Vector2.ZERO:
-		if input_vector.x > 0:
-			$Sprite.flip_h = true
-			
-		if input_vector.x < 0:
-			$Sprite.flip_h = false
-		
 		$Tutorial/WASD.hide()
-		
-		if $AnimationPlayer.current_animation != 'walk':
-			$AnimationPlayer.stop()
-			$AnimationPlayer.play("walk")
-	else:
-		if $AnimationPlayer.current_animation != 'idle':
-			$AnimationPlayer.stop()
-			$AnimationPlayer.play("idle")
 
 func fire():
 	$Tutorial/LeftMouse.hide()

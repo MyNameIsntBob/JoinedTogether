@@ -38,8 +38,8 @@ func add_points(amount):
 	score += amount
 
 const art = {
-	0: preload('res://Art/Characters_0000_Guy.png'),
-	1: preload('res://Art/Characters_0002_Girl.png'),
+	0: preload('res://Art/GuySpriteSheet.png'),
+	1: preload('res://Art/GirlSpriteSheet.png'),
 	'bubble':{
 		0: preload("res://Art/Love_0005_Layer-3.png"),
 		1: preload("res://Art/Alone_0006_download.png"),

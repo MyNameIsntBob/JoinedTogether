@@ -16,3 +16,18 @@ func _process(delta):
 		velocity = velocity.clamped(max_speed)
 	
 	velocity = move_and_slide(velocity, Vector2.ZERO, false, 4, 0.785398, false)
+	
+	if input_vector != Vector2.ZERO:
+		if input_vector.x > 0:
+			$Sprite.flip_h = true
+			
+		if input_vector.x < 0:
+			$Sprite.flip_h = false
+		
+		if $AnimationPlayer.current_animation != 'walk':
+			$AnimationPlayer.stop()
+			$AnimationPlayer.play("walk")
+	else:
+		if $AnimationPlayer.current_animation != 'idle':
+			$AnimationPlayer.stop()
+			$AnimationPlayer.play("idle")
