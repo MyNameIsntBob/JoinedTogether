@@ -91,3 +91,73 @@ position = Vector2( -903.529, -773.331 )
 [node name="Npc23" parent="." instance=ExtResource( 1 )]
 position = Vector2( 808.471, 370.669 )
 gender = 1
+
+[node name="Npc24" parent="." instance=ExtResource( 1 )]
+position = Vector2( 503.356, 713.721 )
+
+[node name="Npc25" parent="." instance=ExtResource( 1 )]
+position = Vector2( -619.529, -505.331 )
+gender = 1
+
+[node name="Npc26" parent="." instance=ExtResource( 1 )]
+position = Vector2( -335.529, -797.331 )
+
+[node name="Npc27" parent="." instance=ExtResource( 1 )]
+position = Vector2( 304.471, 262.669 )
+gender = 1
+
+[node name="Npc28" parent="." instance=ExtResource( 1 )]
+position = Vector2( -139.529, 1034.67 )
+
+[node name="Npc29" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1155.53, 970.669 )
+gender = 1
+
+[node name="Npc30" parent="." instance=ExtResource( 1 )]
+position = Vector2( 912.471, 1074.67 )
+
+[node name="Npc31" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1368.47, -637.331 )
+gender = 1
+
+[node name="Npc32" parent="." instance=ExtResource( 1 )]
+position = Vector2( -903.529, -773.331 )
+
+[node name="Npc33" parent="." instance=ExtResource( 1 )]
+position = Vector2( 808.471, 370.669 )
+gender = 1
+
+[node name="Npc34" parent="." instance=ExtResource( 1 )]
+position = Vector2( 503.356, 713.721 )
+
+[node name="Npc35" parent="." instance=ExtResource( 1 )]
+position = Vector2( -619.529, -505.331 )
+gender = 1
+
+[node name="Npc36" parent="." instance=ExtResource( 1 )]
+position = Vector2( -335.529, -797.331 )
+
+[node name="Npc37" parent="." instance=ExtResource( 1 )]
+position = Vector2( 304.471, 262.669 )
+gender = 1
+
+[node name="Npc38" parent="." instance=ExtResource( 1 )]
+position = Vector2( -139.529, 1034.67 )
+
+[node name="Npc39" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1155.53, 970.669 )
+gender = 1
+
+[node name="Npc40" parent="." instance=ExtResource( 1 )]
+position = Vector2( 912.471, 1074.67 )
+
+[node name="Npc41" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1368.47, -637.331 )
+gender = 1
+
+[node name="Npc42" parent="." instance=ExtResource( 1 )]
+position = Vector2( -903.529, -773.331 )
+
+[node name="Npc43" parent="." instance=ExtResource( 1 )]
+position = Vector2( 808.471, 370.669 )
+gender = 1

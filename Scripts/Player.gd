@@ -17,6 +17,9 @@ func _process(delta):
 		fire()
 
 func fire():
+	if len(get_tree().get_nodes_in_group("Bullet")) != 0:
+		return
+		
 	var bul = BULLETS.instance()
 	bul.rotation = $Aim.rotation + (PI * 0.5)
 	bul.shoot_dir = get_global_mouse_position() - self.global_position

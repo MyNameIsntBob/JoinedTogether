@@ -4,7 +4,9 @@
 [ext_resource path="res://Prefabs/Ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Bullet.gd" type="Script" id=3]
 
-[node name="Bullet" type="Node2D"]
+[node name="Bullet" type="Node2D" groups=[
+"Bullet",
+]]
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
@@ -162,11 +164,11 @@ position = Vector2( 32, 0 )
 position = Vector2( -32, 0 )
 
 [node name="CaptureTimer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 one_shot = true
 
 [node name="KillTimer" type="Timer" parent="."]
-wait_time = 6.0
+wait_time = 3.0
 one_shot = true
 autostart = true
 
