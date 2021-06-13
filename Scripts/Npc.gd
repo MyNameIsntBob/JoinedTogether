@@ -42,9 +42,6 @@ func change_wander_direction():
 func queue_free():
 	if captured:
 		.queue_free()
-		
-		if len(get_tree().get_nodes_in_group("NPC")) <= 0:
-			Global.game_over()
 
 func _on_WanderTimer_timeout():
 	$WanderTimer.wait_time = rand_range(wait_time - wait_range, wait_time + wait_range)

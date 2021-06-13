@@ -28,6 +28,7 @@ __meta__ = {
 }
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+pause_mode = 2
 
 [node name="Aim" type="Node2D" parent="."]
 

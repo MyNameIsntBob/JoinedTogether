@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Prefabs/Npc.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Spawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Background.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Main.gd" type="Script" id=5]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Background" parent="." instance=ExtResource( 4 )]
 
@@ -134,30 +137,24 @@ position = Vector2( 503.356, 713.721 )
 position = Vector2( -619.529, -505.331 )
 gender = 1
 
-[node name="Npc36" parent="." instance=ExtResource( 1 )]
-position = Vector2( -335.529, -797.331 )
+[node name="Spawner" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1602.84, -1077.61 )
 
-[node name="Npc37" parent="." instance=ExtResource( 1 )]
-position = Vector2( 304.471, 262.669 )
-gender = 1
+[node name="Spawner2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 33.6731, -1069.6 )
 
-[node name="Npc38" parent="." instance=ExtResource( 1 )]
-position = Vector2( -139.529, 1034.67 )
+[node name="Spawner3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -456.102, 1325.51 )
 
-[node name="Npc39" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1155.53, 970.669 )
-gender = 1
+[node name="Spawner4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 727.88, 1157.33 )
 
-[node name="Npc40" parent="." instance=ExtResource( 1 )]
-position = Vector2( 912.471, 1074.67 )
+[node name="Spawner5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1582.23, 178.525 )
 
-[node name="Npc41" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1368.47, -637.331 )
-gender = 1
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+autostart = true
 
-[node name="Npc42" parent="." instance=ExtResource( 1 )]
-position = Vector2( -903.529, -773.331 )
-
-[node name="Npc43" parent="." instance=ExtResource( 1 )]
-position = Vector2( 808.471, 370.669 )
-gender = 1
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

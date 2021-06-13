@@ -5,7 +5,7 @@ onready var BULLETS = preload("res://Prefabs/Bullet.tscn")
 func _ready():
 	max_speed = 1000
 
-func _process(delta):
+func _process(_delta):
 	input_vector = Vector2.ZERO
 	
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left") 

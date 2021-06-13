@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Art/Love_0005_Layer-3.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Bubble.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Start"
@@ -77,6 +78,8 @@ tracks/6/keys = {
 }
 
 [node name="Bubble" type="Node2D"]
+z_index = 2
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 0.26802

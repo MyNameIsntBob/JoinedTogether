@@ -3,6 +3,8 @@ extends Node2D
 var shoot_dir : Vector2
 export var shoot_speed : float 
 
+var capturing := false
+
 onready var BUBBLE = preload('res://Prefabs/Bubble.tscn')
 
 var persons := []
@@ -31,6 +33,9 @@ func remove_person(obj):
 		persons.erase(obj)
 
 func start_capture():
+	if capturing:
+		return
+	capturing = true
 	$KillTimer.stop()
 	$CaptureTimer.start()
 
@@ -45,7 +50,23 @@ func _on_CaptureTimer_timeout():
 		self.queue_free()
 		return
 	
+	var type = 0
+	if len(persons) == 1:
+		type = 1
+	else:
+		var gender = -1
+		var is_gay = true
+		for p in persons:
+			if gender == -1:
+				gender = p.gender
+			else:
+				if gender != p.gender:
+					is_gay = false
+		if is_gay:
+			type = 2
+	
 	var bubble = BUBBLE.instance()
+	bubble.type = type
 	get_parent().add_child(bubble)
 	bubble.global_position = persons[0].global_position
 	

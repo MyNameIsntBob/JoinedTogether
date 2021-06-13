@@ -3,6 +3,7 @@ extends CanvasLayer
 export (NodePath) var score
 export (NodePath) var end_label
 export (NodePath) var highscore
+export (NodePath) var time
 
 var end_text = {
 	2: "Ouch, that's just sad",
@@ -13,12 +14,16 @@ var end_text = {
 }
 
 func _ready():
+	time = get_node(time)
 	score = get_node(score)
 	highscore = get_node(highscore)
 	end_label = get_node(end_label)
 	
-func _process(delta):
+func _process(_delta):
 	$GameOverScreen.visible = Global.is_game_over
+	
+	if time:
+		time.text = str(int(Global.time_left))
 	
 	if score:
 		score.text = str(Global.score)
@@ -27,7 +32,7 @@ func _process(delta):
 		highscore.text = "HighScore: " + str(Global.highscore)
 		
 	if end_label and Global.is_game_over:
-		end_label.text = "You got " + str(Global.score) + " love.\n" + get_end_text()
+		end_label.text =  get_end_text() + "\n\n You got " + str(Global.score) + " love."
 		
 func get_end_text():
 	for k in end_text.keys():
